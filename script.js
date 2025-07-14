@@ -7,7 +7,7 @@ const contato = getParam("contato") || "Reijane";
 const loadingDiv = document.getElementById("loading");
 const contentDiv = document.getElementById("content");
 
-fetch("postcards.json")
+fetch("./postcards.json")
   .then(response => response.json())
   .then(data => {
     const info = data[contato];
@@ -27,4 +27,3 @@ fetch("postcards.json")
     console.error("Erro ao carregar JSON:", error);
     loadingDiv.innerText = "Erro ao carregar os dados.";
   });
-  
